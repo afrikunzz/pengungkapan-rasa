@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengakuan Perasaan</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 700px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff4500;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5em;
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .step {
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff6347;
+        }
+        .heart {
+            font-size: 80px;
+            color: red;
+        }
+        .final-message {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pengakuan yang Lama Tertunda...</h1>
+        <p>Hai, ada sesuatu yang sudah lama ingin aku ungkapkan. Tapi... ya, kadang butuh sedikit keberanian.</p>
+
+        <div id="step1" class="step">
+            <p>Jadi, aku ingin memastikan dulu, siapkah kamu mendengarnya? Ini mungkin agak panjang 😅</p>
+            <button onclick="showStep(2)">Ya, aku siap! 💪</button>
+        </div>
+
+        <div id="step2" class="step hidden">
+            <p>Hmm... baiklah. Ceritanya dimulai sejak beberapa waktu lalu. Setiap kali aku melihatmu...</p>
+            <button onclick="showStep(3)">Lanjutkan! 👀</button>
+        </div>
+
+        <div id="step3" class="step hidden">
+            <p>Aku selalu merasa ada yang berbeda. Entah itu senyummu, caramu bicara, atau hanya cara kamu berjalan. Semuanya terasa spesial.</p>
+            <button onclick="showStep(4)">Kok jadi serius? 😳</button>
+        </div>
+
+        <div id="step4" class="step hidden">
+            <p>Ya, mungkin ini terdengar klise. Tapi, rasanya semakin lama semakin sulit untuk disimpan sendiri. Setiap kali aku mencoba mengabaikannya...</p>
+            <button onclick="showStep(5)">Apa yang terjadi? 😮</button>
+        </div>
+
+        <div id="step5" class="step hidden">
+            <p>...semakin kuat perasaan ini. Sampai pada titik di mana aku merasa harus jujur.</p>
+            <button onclick="showStep(6)">Lalu? Katakanlah! 🙈</button>
+        </div>
+
+        <div id="step6" class="step hidden">
+            <p>Aku nggak mau ini jadi rahasia lagi. Siap? Ini dia pengakuanku yang sebenarnya:</p>
+            <button onclick="showStep(7)">Aduh, deg-degan... 😬</button>
+        </div>
+
+        <div id="step7" class="step hidden">
+            <p><strong>Aku... </strong></p>
+            <button onclick="showStep(8)">Apa? 😱</button>
+        </div>
+
+        <div id="step8" class="step hidden">
+            <div class="heart">❤️</div>
+            <p class="final-message">gw suka lu, dari dulu sampai sekarang! 💖</p>
+        </div>
+    </div>
+
+    <script>
+        function showStep(stepNumber) {
+            // Menyembunyikan langkah sebelumnya dan menampilkan yang baru
+            var currentStep = document.querySelectorAll('.step');
+            for (var i = 0; i < currentStep.length; i++) {
+                currentStep[i].classList.add('hidden');
+            }
+            document.getElementById('step' + stepNumber).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
